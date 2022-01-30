@@ -9,6 +9,11 @@
 - [ ] AutoComplete.js
 - [ ] ClickToEdit.js
 
+### Reference 
+
+선발 과제 가이드 :  
+https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521
+
 
 ## 구현한 방법
 - 사용 기술 : HTML5, React, styled-components, CRA(Create-React-App) 
@@ -28,8 +33,3 @@ CRA 버전을 latest로 지정해서 설치하는 방법으로 해결했습니�
 
 ## 실행 방법
 
-
-### Reference 
-
-선발 과제 가이드 :  
-https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521
