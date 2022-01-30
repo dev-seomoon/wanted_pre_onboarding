@@ -13,6 +13,7 @@
 ## 구현한 방법
 - 사용 기술 : HTML5, React, styled-components, CRA(Create-React-App) 
 
+1. `npx create-react-app custom-component` 명령어를 이용해 React 프로젝트 생성
 
 ## 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
 
