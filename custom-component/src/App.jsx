@@ -26,6 +26,7 @@ function App() {
 const GlobalStyle = createGlobalStyle`
   button {
     border: none;
+    padding: 0;
   }
   ul {
     list-style: none;
