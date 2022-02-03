@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-const TabStyled = styled.div``;
+const ToggleStyled = styled.div``;
 
-export default TabStyled;
+export default ToggleStyled;
