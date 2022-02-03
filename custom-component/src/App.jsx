@@ -27,6 +27,11 @@ const GlobalStyle = createGlobalStyle`
   button {
     border: none;
   }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 export default App;
