@@ -38,8 +38,8 @@ https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521
 2) 토글 백그라운드를 토글 컨테이너와 같은 위치로 이동시켜 화면에 보이게 합니다. 
 
 토글버튼과 토글백그라운드의 이동은  
-토글 스위치 상태를 props로 전달해, 스타일드 컴포넌트를 활용해 prop 값에 따라  
-css position - left 값을 변경하는 방식으로 구현했습니다.  
+토글 스위치 상태를 props로 전달해, prop 값에 따라  
+css position - left 값을 변경하는 방식으로 구현했습니다. (스타일드 컴포넌트 활용)  
 
 이 때 left 속성에 transition을 주어 움직임이 매끄럽게 했습니다. 
 
@@ -58,15 +58,32 @@ css position - left 값을 변경하는 방식으로 구현했습니다.
 
 모달창에는 간단한 텍스트와 모달창 닫기 버튼이 들어갑니다.  
 모달창 닫기 버튼은 조금이라도 더 빠른 렌더링을 위해 이미지 파일을 사용하지 않고 css로 직접 만들었습니다. 
-참고 : https://hongpage.kr/51
 
 #### 3. Tab
 
 
 #### 4. Tag
-#### 5. AutoComplete
-리셋버튼 : 입력된 텍스트를 지울 수 있는 버튼. 
-리셋버튼을 클릭 시 input의 value가 빈 문자열로 초기화되고,  
+state : `value`, `tags`  
+
+
+#### 5. AutoComplete  
+state : `value`, `suggestions`, `filteredSuggestions`, `showSuggestionField` 
+
+1) 검색창(Search Bar, input)
+- 사용자가 검색창에 텍스트를 입력하고 Enter 키를 누르면   
+  `suggestions` 배열에 입력한 텍스트가 추가됩니다.  
+- 사용자가 검색창에 텍스트를 입력하면  
+  `suggestions` 배열에서 검색창에 입력한 텍스트를 포함하는 문자열만 찾아 (`filter`, `indexOf` 메소드 사용)  
+  `filteredSuggestions`에 저장합니다. (이 때, 빈 문자열은 제외합니다. )  
+  
+2) 제안영역(Suggestion Field)
+- `filteredSuggestions` 배열의 길이가 1 이상일 경우 (검색어를 포함/검색어와 일치하는 문자열이 있는 경우)  
+  제안영역에 `filteredSuggestions` 배열의 내용을 보여줍니다. (`showSuggestion` state : `false` -> `true`로 변경)
+- 제안영역에서 특정 문자열을 클릭하면, 검색창의 텍스트가 해당 문자열로 대치됩니다. 
+
+3) 리셋버튼 : 입력된 텍스트를 지울 수 있는 버튼. 
+- 리셋버튼을 클릭 시 input창에 입력되어 있는 값이 비워지고, 
+- 사용자가 값을 다시 입력할 수 있도록 input창으로 포커싱이 되도록 했습니다. (React `useRef` 훅 사용)  
 
 
 #### 6. ClickToEdit
