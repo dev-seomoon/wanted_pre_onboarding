@@ -3,12 +3,13 @@ import styled from "styled-components";
 const TagStyled = styled.div`
   width: 80%;
   min-width: 400px;
-  height: 40px;
+  height: 50px;
   border: 1px solid #aaa;
   border-radius: 5px;
   display: flex;
   align-items: center;
   padding: 5px 10px;
+  box-sizing: border-box;
 
   ul {
     display: flex;
