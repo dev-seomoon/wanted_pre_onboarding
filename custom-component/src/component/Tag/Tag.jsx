@@ -3,7 +3,7 @@ import TagStyled from "./Tag.styles";
 
 const Tag = () => {
   const [value, setValue] = useState("");
-  const [tagList, setTagList] = useState(["tag 1", "tag 2"]);
+  const [tagList, setTagList] = useState(["Wanted"]);
   const handleInputChange = e => {
     setValue(e.target.value);
   };
