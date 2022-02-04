@@ -20,9 +20,8 @@ https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521
 
 ### 환경설정
 
-1. `npx create-react-app custom-component` 명령어를 이용해 React 프로젝트 생성
-
-2. ESLint, Prettier 적용
+1. `npx create-react-app custom-component` 명령어를 이용해 React 프로젝트를 생성했습니다. 
+2. ESLint, Prettier를 적용했습니다. Airbnb 코딩 컨벤션을 적용했습니다. (일부 룰 수정)  
 
 ### 컴포넌트 구현
 #### 1. Toggle
@@ -51,18 +50,23 @@ input에 값을 입력하고 Enter 키를 누르면(`onKeyPress` 이벤트),
 배열에서 특정 태그를 삭제할 때는 `filter` 메소드를 사용했습니다.  
 
 
-
 #### 5. AutoComplete  
-state : `value`, `suggestions`, `filteredSuggestions`, `showSuggestionField` 
-
-
+`suggestions`, `filteredSuggestions`, `showSuggestionField` 등을 state로 선언했습니다.  
+input에 값을 입력하고 Enter 키를 누르면 입력한 값이 `suggestions` 배열에 추가됩니다.  
+input의 값이 변경될 때마다 (`onChange` 이벤트)   
+`suggestions` 배열에서 input에 입력된 값을 포함하거나 일치하는 문자열을 찾아  
+`filteredSuggestions` 배열에 저장해 SuggestionField에서 보여줍니다. (`showSuggestionField : true`)
 
 #### 6. ClickToEdit
+`useInput`이라는 커스텀 훅을 만들어 구현했습니다.  
+input에 입력 중인 값을 저장하는 state (`value`)와  
+input에서 입력이 끝난 값을 저장하는(=input에서 포커스가 아웃되었을 때 입력되어 있는 값) state (`result`)를  
+별도로 두어 관리했습니다.  
 
 #### +) Container 구현
 구현한 컴포넌트들을 감싸줄 Container 컴포넌트를 구현했습니다.  
-App.jsx에서 
-
+App.jsx에서 1~6번에서 구현한 컴포넌트들을 각각 Container의 하위 컴포넌트로 두고,  
+Container에서 `children` prop을 사용해 하위 컴포넌트를 렌더링하는 방식으로 구현했습니다.  
 
 ## 구현하면서 어려웠던 점과 해결 방법 (Error Handling Log)
 ### 1. CRA 버전 에러
