@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import AutoCompleteStyled, { SearchBar, SuggestionField, ResetButton } from "./AutoComplete.styles";
 
 const AutoComplete = () => {
@@ -6,6 +6,7 @@ const AutoComplete = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [filteredSuggestions, setFilteredSuggestions] = useState([]);
   const [showSuggestion, setShowSuggestion] = useState(false);
+  const inputRef = useRef();
 
   const handleSuggestion = input => {
     const filtered = suggestions.filter(keyword => keyword.toLowerCase().indexOf(input.toLowerCase()) > -1 && input !== "");
@@ -40,11 +41,12 @@ const AutoComplete = () => {
     setValue("");
     setFilteredSuggestions([]);
     setShowSuggestion(false);
+    inputRef.current.focus();
   };
 
   return (
     <AutoCompleteStyled>
-      <SearchBar value={value} onChange={handleInputChange} onKeyPress={handleEnter} showSuggestion={showSuggestion} />
+      <SearchBar ref={inputRef} value={value} onChange={handleInputChange} onKeyPress={handleEnter} showSuggestion={showSuggestion} />
       <ResetButton onClick={handleReset} />
       <SuggestionField show={showSuggestion}>
         {filteredSuggestions.map(keyword => (
