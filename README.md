@@ -63,7 +63,7 @@ input에 입력 중인 값을 저장하는 state (`value`)와
 input에서 입력이 끝난 값을 저장하는(=input에서 포커스가 아웃되었을 때 입력되어 있는 값) state (`result`)를  
 별도로 두어 관리했습니다.  
 
-#### +) Container 구현
+### +) Container 구현
 구현한 컴포넌트들을 감싸줄 Container 컴포넌트를 구현했습니다.  
 App.jsx에서 1~6번에서 구현한 컴포넌트들을 각각 Container의 하위 컴포넌트로 두고,  
 Container에서 `children` prop을 사용해 하위 컴포넌트를 렌더링하는 방식으로 구현했습니다.  
@@ -74,11 +74,25 @@ Container에서 `children` prop을 사용해 하위 컴포넌트를 렌더링하
 You are running `create-react-app` 4.0.3, which is behind the latest release (5.0.0).
 We no longer support global installation of Create React App.
 ```
-=> `npx create-react-app@latest custom-component` 명령어로 해결.  
+=> `npx create-react-app@latest custom-component` 명령어로 해결. 
 확인해보니 CRA가 글로벌이나 로컬에 설치되어 있지 않은데도 위와 같은 에러가 발생해서  
 CRA 버전을 latest로 지정해서 설치하는 방법으로 해결했습니다. 
 
 ### 2. ESLint & Prettier 초기 설정 과정에서의 에러
+1) `ESlint - Error: Must use import to load ES Module` :  
+  Eslint parser로 지정한 `babel-eslint`가 deprecated 되어서 발생한 이슈.  
+  `babel-eslint` 대신 `@babel/eslint-parser`를 parser로 지정해서 해결했습니다. 
+  
+2) `no babel config file detected` :  
+  Eslint 설정 파일의 `parserOptions` 부분에 `requireConfigFile: false` 추가로 해결했습니다.  
+  
+3) `This experimental syntax requires enabling ... parser plugins` :  
+  `@babel/preset-react` 설치 후 
+  Eslint 설정 파일의 `parserOptions` > `babelOptions`에 `@babel/preset-react`를 추가해 해결했습니다. 
+
+4) `Parsing error: Cannot find module '@babel/preset-react'` : 
+  VSCode 문제로 추정. VSCode 창을 새로 열고  
+  custom-component 폴더가 프로젝트 루트가 되도록 open 했더니 해결되었습니다. 
 
 ## 실행 방법
 
