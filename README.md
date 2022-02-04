@@ -44,6 +44,11 @@ css position - left 값을 변경하는 방식으로 구현했습니다.
 이 때 left 속성에 transition을 주어 움직임이 매끄럽게 했습니다. 
 
 #### 2. Modal
+오버레이, 모달(&ModalCloseButton), 모달버튼 크게 세가지로 구성했습니다. 
+
+모달창이 Close 상태일 때는 (초기 상태)  
+Overlay, ModalBox가 화면에 보이지 않습니다. (`display: none`)  
+
 #### 3. Tab
 #### 4. Tag
 #### 5. AutoComplete
