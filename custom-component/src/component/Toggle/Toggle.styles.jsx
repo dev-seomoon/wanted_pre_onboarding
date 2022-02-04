@@ -6,7 +6,7 @@ const ToggleStyled = styled.div`
   align-items: center;
   width: 90px;
   height: 37px;
-  background: ${({ toggle }) => (toggle ? "purple" : "#eee")};
+  background: ${({ toggle }) => (toggle ? "#3366ff" : "#eee")};
   border-radius: 30px;
   padding: 0 8px;
   box-sizing: border-box;
@@ -17,7 +17,7 @@ ToggleStyled.Background = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: purple;
+  background: #3366ff;
   left: ${({ toggle }) => (toggle ? "0" : "-90px")};
   transition: left 0.5s;
 `;

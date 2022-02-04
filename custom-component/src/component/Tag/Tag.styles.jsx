@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const TagStyled = styled.div`
-  width: 80%;
+  width: 100%;
   min-width: 400px;
   height: 50px;
   border: 1px solid #aaa;
@@ -19,7 +19,7 @@ const TagStyled = styled.div`
     display: flex;
     align-items: center;
     color: #fff;
-    background: purple;
+    background: #3366ff;
     text-align: center;
     line-height: 30px;
     border-radius: 5px;
@@ -31,7 +31,7 @@ const TagStyled = styled.div`
       height: 14px;
       font-size: 12px;
       text-align: center;
-      color: purple;
+      color: #3366ff;
       background: #fff;
       border-radius: 100%;
       margin-left: 8px;

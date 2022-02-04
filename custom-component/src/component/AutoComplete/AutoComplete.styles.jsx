@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const AutoCompleteStyled = styled.div`
-  width: 80%;
+  width: 100%;
   position: relative;
 `;
 

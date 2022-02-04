@@ -1,28 +1,28 @@
 import styled from "styled-components";
 
 const TabStyled = styled.div`
-  width: 80%;
+  width: 100%;
 `;
 
 TabStyled.Nav = styled.nav`
   ul {
     width: 100%;
+    height: 40px;
+    background: #eee;
     display: flex;
     justify-content: flex-end;
-    background: #eee;
-    height: 30px;
   }
 
   li {
     width: 30%;
-    line-height: 30px;
+    line-height: 40px;
     padding-left: 10px;
     box-sizing: border-box;
     cursor: pointer;
   }
 
   li.active {
-    background: purple;
+    background: #3366ff;
     color: #fff;
     transition: all 0.3s;
   }

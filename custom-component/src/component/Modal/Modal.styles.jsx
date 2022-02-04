@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const ModalStyled = styled.div`
-  width: 80%;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -62,7 +62,7 @@ ModalStyled.Button = styled.button`
   width: 130px;
   height: 45px;
   color: #fff;
-  background: purple;
+  background: #3366ff;
   border-radius: 30px;
   cursor: pointer;
 `;
