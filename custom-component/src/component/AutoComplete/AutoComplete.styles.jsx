@@ -28,6 +28,9 @@ export const ResetButton = styled.div`
   text-align: center;
   cursor: pointer;
   :after {
+    position: absolute;
+    top: 0;
+    left: 0;
     content: "×";
     font-size: 20px;
     line-height: 15px;
