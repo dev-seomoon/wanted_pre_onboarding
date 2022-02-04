@@ -9,6 +9,9 @@
 - [x] AutoComplete.js
 - [x] ClickToEdit.js
 
+### Demo 
+https://dev-seomoon.github.io/wanted_pre_onboarding/
+
 ### Reference 
 
 선발 과제 가이드 :  
@@ -94,4 +97,36 @@ CRA 버전을 latest로 지정해서 설치하는 방법으로 해결했습니�
   custom-component 폴더가 프로젝트 루트가 되도록 open 했더니 해결되었습니다. 
  
 ## 실행 방법
+- Demo : https://dev-seomoon.github.io/wanted_pre_onboarding/
+
+- 프로젝트 실행 방법 :  
+1. 저장소 클론 받기 
+`git clone https://github.com/dev-seomoon/wanted_pre_onboarding` 
+
+2. custom-component 폴더로 이동  
+`cd custom-component` 
+
+3. 필요한 패키지 설치  
+`npm install`  
+
+4. 프로젝트 실행  
+`npm run start`  
+
+### Toggle
+![toggle](https://user-images.githubusercontent.com/52448114/152529934-1a53281a-0225-469e-824b-b29d7ba655fd.gif)
+
+### Modal
+![modal](https://user-images.githubusercontent.com/52448114/152529951-f2817e06-09ae-4b81-9dc3-c17f3beb794b.gif)
+
+### Tab
+![tab](https://user-images.githubusercontent.com/52448114/152529973-ad1f1088-9df6-4871-b04e-ff001c578cbd.gif)
+
+### Tag
+
+### AutoComplete
+![autocomplete](https://user-images.githubusercontent.com/52448114/152530036-6e109798-8f6a-4c04-9138-d27515168ada.gif)
+
+### ClickToEdit
+
+
 
