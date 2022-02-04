@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const TagStyled = styled.div`
   width: 100%;
-  min-width: 400px;
+  min-width: 200px;
   height: 50px;
   border: 1px solid #aaa;
   border-radius: 5px;

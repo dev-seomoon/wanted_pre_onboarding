@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const ContainerStyled = styled.div`
   width: 90%;
-  min-width: 450px;
+  min-width: 400px;
+  max-width: 700px;
   height: 380px;
   border: 1px solid #aaa;
   border-radius: 10px;
