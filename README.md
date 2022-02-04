@@ -114,31 +114,37 @@ CRA 버전을 latest로 지정해서 설치하는 방법으로 해결했습니�
 
 ### Toggle
 ![toggle](https://user-images.githubusercontent.com/52448114/152529934-1a53281a-0225-469e-824b-b29d7ba655fd.gif)  
-토글 버튼 (흰색 원모양 버튼)을 눌러 토글 스위치를 ON/OFF할 수 있습니다.  
+토글 버튼(흰색 원모양 버튼)을 눌러 토글 스위치를 ON/OFF할 수 있습니다.  
+<br />
 
 ### Modal
 ![modal](https://user-images.githubusercontent.com/52448114/152529951-f2817e06-09ae-4b81-9dc3-c17f3beb794b.gif)  
-open modal 버튼을 눌러 모달창을 열고, 닫기 버튼 (x 버튼)을 눌러 모달창을 닫을 수 있습니다. 
+open modal 버튼을 눌러 모달창을 열고, 닫기 버튼(x 버튼)을 눌러 모달창을 닫을 수 있습니다. 
+<br />
+
 
 ### Tab
 ![tab](https://user-images.githubusercontent.com/52448114/152529973-ad1f1088-9df6-4871-b04e-ff001c578cbd.gif)  
 상단의 탭 메뉴를 클릭해 원하는 탭으로 이동할 수 있습니다.  
+<br />
+
 
 ### Tag
 ![tag](https://user-images.githubusercontent.com/52448114/152531437-34a9943c-6603-4f08-89b5-572169ef2e4c.gif)  
 태그 입력 후 Enter 키를 눌러 새로운 태그를 추가할 수 있습니다.  
-태그 옆의 delete 버튼 (x 버튼) 을 눌러 태그를 삭제할 수 있습니다.  
+태그 옆의 delete 버튼(x 버튼)을 눌러 태그를 삭제할 수 있습니다.  
+<br />
+
 
 ### AutoComplete
 ![autocomplete](https://user-images.githubusercontent.com/52448114/152530036-6e109798-8f6a-4c04-9138-d27515168ada.gif)  
 검색어 자동완성 기능입니다. 이전에 입력한 검색어에 따라 검색어를 제안합니다.  
 제안된 검색어 중 하나를 클릭하면 자동으로 검색어가 완성됩니다.  
-x 버튼을 눌러 검색창에 입력된 값을 지울 수 있습니다.  
+리셋 버튼(x 버튼)을 눌러 검색창에 입력된 값을 지울 수 있습니다.  
+<br />
+
 
 ### ClickToEdit
 ![ezgif-5-6c9e72f539](https://user-images.githubusercontent.com/52448114/152532057-9ef6daea-a286-4391-bca3-85086c822282.gif)  
 이름, 나이를 입력하면  
 하단에서 입력된 이름과 나이를 확인할 수 있습니다.  
-
-
-
