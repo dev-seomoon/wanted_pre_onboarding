@@ -6,17 +6,30 @@ import Tab from "./component/Tab/Tab";
 import Tag from "./component/Tag/Tag";
 import AutoComplete from "./component/AutoComplete/AutoComplete";
 import ClickToEdit from "./component/ClickToEdit/ClickToEdit";
+import Container from "./component/Container/Container";
 
 function App() {
   return (
     <>
       <div className="App">
-        <Toggle />
-        <Modal />
-        <Tab />
-        <Tag />
-        <AutoComplete />
-        <ClickToEdit />
+        <Container title="Toggle">
+          <Toggle />
+        </Container>
+        <Container title="Modal">
+          <Modal />
+        </Container>
+        <Container title="Tab">
+          <Tab />
+        </Container>
+        <Container title="Tag">
+          <Tag />
+        </Container>
+        <Container title="Auto Complete">
+          <AutoComplete />
+        </Container>
+        <Container title="Click To Edit">
+          <ClickToEdit />
+        </Container>
       </div>
       <GlobalStyle />
     </>
@@ -31,6 +44,9 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+  }
+  h2 {
     margin: 0;
   }
 `;
