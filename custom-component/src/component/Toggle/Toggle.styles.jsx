@@ -34,4 +34,6 @@ ToggleStyled.ToggleButton = styled.div`
   transition: left 0.5s;
 `;
 
+ToggleStyled.Description = styled.p``;
+
 export default ToggleStyled;

@@ -7,10 +7,13 @@ const Toggle = () => {
   const onToggle = () => setToggle(prev => !prev);
 
   return (
-    <ToggleStyled>
-      <ToggleStyled.Background toggle={toggle} />
-      <ToggleStyled.ToggleButton toggle={toggle} onClick={onToggle} />
-    </ToggleStyled>
+    <>
+      <ToggleStyled>
+        <ToggleStyled.Background toggle={toggle} />
+        <ToggleStyled.ToggleButton toggle={toggle} onClick={onToggle} />
+      </ToggleStyled>
+      <ToggleStyled.Description>Toggle Switch {toggle ? "ON" : "OFF"}</ToggleStyled.Description>
+    </>
   );
 };
 
