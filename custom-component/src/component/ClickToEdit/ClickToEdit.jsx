@@ -9,11 +9,11 @@ const ClickToEdit = () => {
     <ClickToEditStyled>
       <label htmlFor="name">
         이름
-        <input id="name" {...name} />
+        <input type="text" id="name" autoComplete="off" {...name} />
       </label>
       <label htmlFor="age">
         나이
-        <input id="age" {...age} />
+        <input type="text" id="age" autoComplete="off" {...age} />
       </label>
       <div>
         이름 {name.result} 나이 {age.result}
