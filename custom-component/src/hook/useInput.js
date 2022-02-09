@@ -12,7 +12,9 @@ const useInput = () => {
   }
 
   return { 
-    inputProps: {value, onChange, onBlur},
+    inputProps: {
+      value, onChange, onBlur
+    },
     setValue, result
    };
 };
