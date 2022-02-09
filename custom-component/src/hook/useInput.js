@@ -11,7 +11,10 @@ const useInput = () => {
     setResult(value);
   }
 
-  return { value, result, onChange, onBlur };
+  return { 
+    inputProps: {value, onChange, onBlur},
+    setValue, result
+   };
 };
 
 export default useInput;

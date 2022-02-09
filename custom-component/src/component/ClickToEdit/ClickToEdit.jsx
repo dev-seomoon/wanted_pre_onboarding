@@ -9,11 +9,11 @@ const ClickToEdit = () => {
     <ClickToEditStyled>
       <FormItem htmlFor="name">
         이름
-        <FormItem.Input type="text" id="name" autoComplete="off" {...name} />
+        <FormItem.Input type="text" id="name" autoComplete="off" {...name.inputProps} />
       </FormItem>
       <FormItem htmlFor="age">
         나이
-        <FormItem.Input type="text" id="age" autoComplete="off" {...age} />
+        <FormItem.Input type="text" id="age" autoComplete="off" {...age.inputProps} />
       </FormItem>
       <FormResult>
         이름 {name.result} 나이 {age.result}
