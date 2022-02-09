@@ -50,9 +50,9 @@ const AutoComplete = () => {
       <ResetButton onClick={handleReset} />
       <SuggestionField show={showSuggestion}>
         {filteredSuggestions.map(keyword => (
-          <li key={keyword} onClick={selectSuggestion}>
+          <SuggestionField.Item key={keyword} onClick={selectSuggestion}>
             {keyword}
-          </li>
+          </SuggestionField.Item>
         ))}
       </SuggestionField>
     </AutoCompleteStyled>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ToggleStyled from "./Toggle.styles";
+import ToggleStyled, { Background, Button, Description } from "./Toggle.styles";
 
 const Toggle = () => {
   const [toggle, setToggle] = useState(false);
@@ -9,10 +9,10 @@ const Toggle = () => {
   return (
     <>
       <ToggleStyled>
-        <ToggleStyled.Background toggle={toggle} />
-        <ToggleStyled.ToggleButton toggle={toggle} onClick={onToggle} />
+        <Background toggle={toggle} />
+        <Button toggle={toggle} onClick={onToggle} />
       </ToggleStyled>
-      <ToggleStyled.Description>Toggle Switch {toggle ? "ON" : "OFF"}</ToggleStyled.Description>
+      <Description>Toggle Switch {toggle ? "ON" : "OFF"}</Description>
     </>
   );
 };

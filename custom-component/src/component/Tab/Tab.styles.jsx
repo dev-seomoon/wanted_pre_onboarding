@@ -4,24 +4,24 @@ const TabStyled = styled.div`
   width: 100%;
 `;
 
-TabStyled.Nav = styled.nav`
-  ul {
-    width: 100%;
-    height: 40px;
-    background: #eee;
-    display: flex;
-    justify-content: flex-end;
-  }
+TabStyled.Nav = styled.nav``;
 
-  li {
-    width: 30%;
-    line-height: 40px;
-    padding-left: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
+export const TabList = styled.ul`
+  width: 100%;
+  height: 40px;
+  background: #eee;
+  display: flex;
+  justify-content: flex-end;
+`;
 
-  li.active {
+TabList.Item = styled.li`
+  width: 30%;
+  line-height: 40px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &.active {
     background: #3366ff;
     color: #fff;
     transition: all 0.3s;

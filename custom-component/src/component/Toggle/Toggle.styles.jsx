@@ -13,7 +13,7 @@ const ToggleStyled = styled.div`
   overflow: hidden;
 `;
 
-ToggleStyled.Background = styled.div`
+export const Background = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -22,7 +22,7 @@ ToggleStyled.Background = styled.div`
   transition: left 0.5s;
 `;
 
-ToggleStyled.ToggleButton = styled.div`
+export const Button = styled.div`
   position: absolute;
   left: ${({ toggle }) => (toggle ? "calc(100% - 32px)" : "8px")};
   width: 24px;
@@ -34,6 +34,6 @@ ToggleStyled.ToggleButton = styled.div`
   transition: left 0.5s;
 `;
 
-ToggleStyled.Description = styled.p``;
+export const Description = styled.p``;
 
 export default ToggleStyled;

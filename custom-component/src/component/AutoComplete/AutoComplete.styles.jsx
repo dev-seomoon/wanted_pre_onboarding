@@ -47,11 +47,11 @@ export const SuggestionField = styled.ul`
   box-shadow: 0 5px 5px #bbb;
   padding: 10px;
   box-sizing: border-box;
+`;
 
-  li {
-    line-height: 20px;
-  }
-  li:hover {
+SuggestionField.Item = styled.li`
+  line-height: 20px;
+  :hover {
     background: #eee;
   }
 `;

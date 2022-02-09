@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ModalStyled from "./Modal.styles";
+import ModalStyled, { Overlay, ModalBox, OpenModalButton } from "./Modal.styles";
 
 const Modal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,12 +11,12 @@ const Modal = () => {
   };
   return (
     <ModalStyled>
-      <ModalStyled.Overlay isOpen={isOpen} />
-      <ModalStyled.Box isOpen={isOpen}>
+      <Overlay isOpen={isOpen} />
+      <ModalBox isOpen={isOpen}>
         Hello, Modal!
-        <ModalStyled.Box.CloseButton onClick={handleClose} />
-      </ModalStyled.Box>
-      <ModalStyled.Button onClick={handleOpen}>Open Modal</ModalStyled.Button>
+        <ModalBox.CloseButton onClick={handleClose} />
+      </ModalBox>
+      <OpenModalButton onClick={handleOpen}>Open Modal</OpenModalButton>
     </ModalStyled>
   );
 };

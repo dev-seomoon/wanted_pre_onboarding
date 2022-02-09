@@ -9,7 +9,7 @@ const ModalStyled = styled.div`
   justify-content: center;
 `;
 
-ModalStyled.Overlay = styled.div`
+export const Overlay = styled.div`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   width: 100%;
   height: 100%;
@@ -20,7 +20,7 @@ ModalStyled.Overlay = styled.div`
   z-index: 10;
 `;
 
-ModalStyled.Box = styled.div`
+export const ModalBox = styled.div`
   display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   align-items: center;
   justify-content: center;
@@ -34,7 +34,7 @@ ModalStyled.Box = styled.div`
   z-index: 100;
 `;
 
-ModalStyled.Box.CloseButton = styled.div`
+ModalBox.CloseButton = styled.div`
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -58,7 +58,7 @@ ModalStyled.Box.CloseButton = styled.div`
   }
 `;
 
-ModalStyled.Button = styled.button`
+export const OpenModalButton = styled.button`
   width: 130px;
   height: 45px;
   color: #fff;

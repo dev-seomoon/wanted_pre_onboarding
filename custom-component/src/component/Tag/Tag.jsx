@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TagStyled from "./Tag.styles";
+import TagStyled, { TagList, DeleteTagButton, TagInput } from "./Tag.styles";
 
 const Tag = () => {
   const [value, setValue] = useState("");
@@ -18,22 +18,22 @@ const Tag = () => {
   };
   return (
     <TagStyled>
-      <ul>
+      <TagList>
         {tagList.map(tag => (
-          <li key={tag}>
+          <TagList.Item key={tag}>
             {tag}
-            <button
+            <DeleteTagButton
               type="button"
               onClick={() => {
                 removeTag(tag);
               }}
             >
               x
-            </button>
-          </li>
+            </DeleteTagButton>
+          </TagList.Item>
         ))}
-      </ul>
-      <input value={value} onChange={handleInputChange} onKeyPress={addTag} placeholder="Press enter to add tags" />
+      </TagList>
+      <TagInput value={value} onChange={handleInputChange} onKeyPress={addTag} placeholder="Press enter to add tags" />
     </TagStyled>
   );
 };

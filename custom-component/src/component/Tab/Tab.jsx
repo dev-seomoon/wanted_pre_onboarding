@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TabStyled from "./Tab.styles";
+import TabStyled, { TabList } from "./Tab.styles";
 
 const Tab = () => {
   const tabs = ["Tab1", "Tab2", "Tab3"];
@@ -7,13 +7,13 @@ const Tab = () => {
   return (
     <TabStyled>
       <TabStyled.Nav>
-        <ul>
+        <TabList>
           {tabs.map((tab, index) => (
-            <li key={tab} onClick={() => setCurrentIndex(index)} className={index === currentIndex ? "active" : ""}>
+            <TabList.Item key={tab} onClick={() => setCurrentIndex(index)} className={index === currentIndex ? "active" : ""}>
               {tab}
-            </li>
+            </TabList.Item>
           ))}
-        </ul>
+        </TabList>
       </TabStyled.Nav>
       <TabStyled.Content>{tabs[currentIndex]}</TabStyled.Content>
     </TabStyled>
