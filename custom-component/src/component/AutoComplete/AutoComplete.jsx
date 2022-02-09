@@ -1,56 +1,30 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
+import useAutoComplete from "../../hook/useAutoComplete";
 import AutoCompleteStyled, { SearchBar, SuggestionField, ResetButton } from "./AutoComplete.styles";
 
 const AutoComplete = () => {
-  const [value, setValue] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
-  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
-  const [showSuggestion, setShowSuggestion] = useState(false);
+  const { search, suggestions } = useAutoComplete();
+  const { showSuggestions, filteredSuggestions, addSuggestion } = suggestions;
   const inputRef = useRef();
-
-  const handleSuggestion = input => {
-    const filtered = suggestions.filter(keyword => keyword.toLowerCase().indexOf(input.toLowerCase()) > -1 && input !== "");
-    if (filtered.length > 0) {
-      setFilteredSuggestions(filtered);
-      setShowSuggestion(true);
-    } else {
-      setFilteredSuggestions([]);
-      setShowSuggestion(false);
-    }
-  };
-
-  const handleInputChange = e => {
-    setValue(e.target.value);
-    handleSuggestion(e.target.value);
-  };
 
   const handleEnter = e => {
     if (e.key === "Enter") {
-      setSuggestions([...suggestions, e.target.value]);
-      setValue("");
-      setShowSuggestion(false);
+      addSuggestion(e.target.value);
     }
   };
 
-  const selectSuggestion = e => {
-    setValue(e.target.innerText);
-    handleSuggestion(e.target.innerText);
-  };
-
   const handleReset = () => {
-    setValue("");
-    setFilteredSuggestions([]);
-    setShowSuggestion(false);
+    search.onReset();
     inputRef.current.focus();
   };
 
   return (
     <AutoCompleteStyled>
-      <SearchBar ref={inputRef} value={value} onChange={handleInputChange} onKeyPress={handleEnter} showSuggestion={showSuggestion} />
+      <SearchBar ref={inputRef} value={search.searchValue} onChange={search.onChange} onKeyPress={handleEnter} showSuggestion={showSuggestions} />
       <ResetButton onClick={handleReset} />
-      <SuggestionField show={showSuggestion}>
+      <SuggestionField show={showSuggestions}>
         {filteredSuggestions.map(keyword => (
-          <SuggestionField.Item key={keyword} onClick={selectSuggestion}>
+          <SuggestionField.Item key={keyword} onClick={search.onSelect}>
             {keyword}
           </SuggestionField.Item>
         ))}
